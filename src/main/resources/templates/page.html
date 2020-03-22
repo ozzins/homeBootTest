@@ -6,6 +6,6 @@
 
 <body>
     <div id="root"></div>
-    <script src="/js/react/main.bundle.js"></script>
+    <script th:src="@{/js/react/{pageName}.bundle.js(pageName=${pageName})}"></script>
 </body>
 </html>
