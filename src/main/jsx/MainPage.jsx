@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 class MainPage extends React.Component {
  
     render() {
-        return <div className="main">메인 페이지221232</div>;
+        return <div className="main">메인 페이지22123212</div>;
     }
  
 }

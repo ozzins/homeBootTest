@@ -16,10 +16,10 @@ public class ReactController {
     public ModelAndView main(Model model) {
         ModelAndView mav = new ModelAndView("page");
         mav.addObject("pageName", "main");
+        log.debug("this is test.do!!!");
         return mav;
     }
  
-
     @GetMapping("/{name}.do")
     public String page(@PathVariable String name, Model model) {
         model.addAttribute("pageName", name);
