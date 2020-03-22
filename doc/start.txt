@@ -1,0 +1,5 @@
+npm init
+
+d:\dev>npm i react react-dom
+
+d:\dev>npm i @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader style-loader webpack webpack-cli -D
