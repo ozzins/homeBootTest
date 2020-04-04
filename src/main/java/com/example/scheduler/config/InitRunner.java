@@ -13,11 +13,10 @@ import org.quartz.TriggerBuilder;
 import org.quartz.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.quartz.CronScheduleBuilder;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import com.example.scheduler.service.SimpleJobService;
+
+import org.quartz.CronScheduleBuilder;
 
 @Component
 public class InitRunner implements CommandLineRunner  {
@@ -46,7 +45,7 @@ public class InitRunner implements CommandLineRunner  {
         jobDataMap.put("key1", "value1");
         jobDataMap.put("key2", 2);
 
-        return JobBuilder.newJob(InitRunner.class) // (2)
+        return JobBuilder.newJob(SimpleJobService.class) // (2)
                 .withIdentity(jobKey).withDescription("Simple Quartz Job Detail").usingJobData(jobDataMap).build();
     }
 
