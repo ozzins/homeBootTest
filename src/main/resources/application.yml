@@ -2,6 +2,14 @@ spring:
   h2:
     console:
       enabled: true
+
   devtools:
     livereload:
       enabled: true
+
+logging:
+  level:
+    root: info
+
+server:
+  port: 8000
